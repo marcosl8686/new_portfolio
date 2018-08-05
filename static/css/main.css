@@ -1,0 +1,363 @@
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+audio,
+canvas,
+img,
+video {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+.dont-display {
+  display: none;
+}
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+
+/* ===== ScrollMagic Class ==============================================
+   Author: Petr Tichy - ihatetomatoes.net
+   ========================================================================== */
+
+ 
+.wrapper {
+  max-width: 350px;
+  margin: 0 10%;
+}
+
+/* Make the body 100% of the browser viewport height */
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 5%;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* =Main */
+
+#slide01, #slide03, #slide05 {
+  background-color: #FFFFFF; 
+}
+
+#slide01 {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.4)), to(rgba(0,0,0,0.4))), url(../img/lego-background.png);
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../img/lego-background.png);
+}
+#slide02 {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.4)), to(rgba(0,0,0,0.4))), url(../img/The-Legend-of-Zelda-Twilight-Princess-HD-4K-Wallpaper-2.jpg);
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../img/The-Legend-of-Zelda-Twilight-Princess-HD-4K-Wallpaper-2.jpg);
+}
+#slide03 {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.4)), to(rgba(0,0,0,0.4))), url(../img/gundam_01.jpg);
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../img/gundam_01.jpg);
+}
+#slide04 {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.4)), to(rgba(0,0,0,0.4))), url(../img/hannah-marcos-en-491.jpg);
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../img/hannah-marcos-en-491.jpg);
+}
+#slide00,
+#slide01,
+#slide02,
+#slide03,
+#slide04 {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#slide00,
+#slide01,
+#slide02,
+#slide03,
+#slide04 {
+  color: #fff;
+}
+
+
+.slide {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.slide .pin-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.slide .wrapper {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+}
+
+.slide .editor_box {
+  position: absolute;
+  top: 25%;
+  left: 40%;
+  width: 40%;
+  height: 500px;
+  margin-left: -30%
+}
+.about-title {
+  font-size: 35px;
+  line-height: 45px;
+  font-weight: 600;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  right: 0;
+  width: 390px;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+
+
+#slide02 .pin-wrapper,
+#slide03 .pin-wrapper,
+#slide04 .pin-wrapper {
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+#about .scrollmagic-pin-spacer {
+  position: absolute !important;
+  clip: rect(auto, auto, auto, auto);
+}
+
+/* =Footer */
+
+.footer-container {
+  text-align: center;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: #06060d;
+}
+
+.footer-container .wrapper {
+  width: 80%;
+  max-width: none;
+  margin: 0 10%;
+}
+
+.footer-container h3 {
+  margin: 0;
+  padding: 20px 0;
+  font-weight: normal;
+}
+
+.footer-container a {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media (max-width: 1199px) {}
+
+/*    Medium devices (tablets, less than 992px)*/
+
+@media (max-width: 991px) {}
+
+/*// Small devices (landscape phones, less than 768px)*/
+
+@media (max-width: 768px) {
+  .slide .editor_box {
+    top: 20%;
+    left: 50%;
+    margin-left: -40%;
+    width: 80%;
+    -webkit-transform: unset;
+    transform: unset;
+  }
+  .slide .wrapper {
+    top: 75%;
+    width: 80%;
+    left: 50%;
+    margin-left: -40%;
+    max-width: 80%;
+  }
+}
+
+
+/*// Extra small devices (portrait phones, less than 576px)*/
+
+@media (max-width: 575px) {
+  .slide .editor_box {
+    top: 10%;
+    left: 50%;
+    margin-left: -45%;
+    width: 90%;
+    height: 300px;
+    -webkit-transform: unset;
+    transform: unset;
+  }
+  .slide .wrapper {
+    top: 65%;
+    width: 80%;
+    left: 50%;
+    margin-left: -40%;
+    max-width: 80%;
+  }
+  .ace_gutter-layer {
+    width: 30px;
+  }
+}
+
+/*SideSlide CSS*/
+
+#experience_school {
+    overflow: hidden;
+    color: #333;
+}
+.horizontal-container {
+    width: 300%;
+    height: 100vh;
+    position: relative;
+}
+.section-horizontal {
+    width: 33.3333%;
+    height: 100%;
+}
+.section-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 33.3333%;
+    bottom: 0;
+}
+.section-2 {
+    position: absolute;
+    top: 0;
+    left: 33.3333%;
+    right: 66.6666%;
+    bottom: 0;
+}
+.section-3 {
+    position: absolute;
+    top: 0;
+    left: 66.6666%;
+    right: 100%;
+    bottom: 0;
+}
+.section-1,
+.section-2,
+.section-3 {
+  background-image: url(../img/full_background.png);
+  color: #333;
+  background-repeat:no-repeat;
+  background-position: center center;
+  background-size:cover;
+}
+.section-horizontal .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.wrapper {
+    width: 90%;
+    margin: 0 5%;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
