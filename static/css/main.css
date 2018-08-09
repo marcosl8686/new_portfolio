@@ -361,3 +361,9 @@ body {
 .clearfix {
     *zoom: 1;
 }
+
+#mychar {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+}
