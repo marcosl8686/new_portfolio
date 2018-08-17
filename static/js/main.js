@@ -3,6 +3,17 @@ $(document).ready(function () {
 
   // Init ScrollMagic
   var controller = new ScrollMagic.Controller();
+  
+  var tl = new TimelineLite();
+  
+  tl.from('.slideInUp h2', 1, {y: '40', autoAlpha: 0, ease:Power0.easeNone, delay:0.2})
+  
+  var slideParallaxScene = new ScrollMagic.Scene({
+      triggerElement: '.slideInUp', 
+      triggerHook: 1
+  })
+  .setTween(tl)
+  .addTo(controller);
 
   	var horizontalMoveTl = new TimelineMax();
 
@@ -17,8 +28,6 @@ $(document).ready(function () {
 	.setTween(horizontalMoveTl)
 	.setPin('#experience_school')
 	.addTo(controller);
-  
-  
   
 
   // Scene 1 - pin the second section
