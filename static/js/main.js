@@ -4,6 +4,12 @@ $(document).ready(function () {
   // Init ScrollMagic
   var controller = new ScrollMagic.Controller();
   
+  var horController = new ScrollMagic.Controller({vertical:false});
+  
+  var work1 = TweenMax.to('#mychar', 0.5, {x: "+=500", ease:Linear.easeNone});
+  
+  var work1Scene = new ScrollMagic.Scene({triggerElement: ".target1", duration:500}).setTween(work1).addIndicators().addTo(horController);
+  
   var tl = new TimelineLite();
   
   tl.from('.slideInUp h2', 1, {y: '40', autoAlpha: 0, ease:Power0.easeNone, delay:0.2})
