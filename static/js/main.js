@@ -1,40 +1,68 @@
 $(document).ready(function () {
-  
+
 
   // Init ScrollMagic
   var controller = new ScrollMagic.Controller();
-  
-  var horController = new ScrollMagic.Controller({vertical:false});
-  
-  var work1 = TweenMax.to('#mychar', 0.5, {x: "+=500", ease:Linear.easeNone});
-  
-  var work1Scene = new ScrollMagic.Scene({triggerElement: ".target1", duration:500}).setTween(work1).addIndicators().addTo(horController);
-  
+
+  var horController = new ScrollMagic.Controller({
+    vertical: false
+  });
+
+  var work1 = TweenMax.to('#mychar', 0.5, {
+    x: "+=3500",
+    ease: Linear.easeNone
+  });
+
+  var uci = TweenMax.from('.uci_logo', 0.5, {
+    scale: 0,
+    autoAlpha: 0,
+    ease: Bounce.easeOut
+  });
+
+  var work1Scene = new ScrollMagic.Scene({
+    triggerElement: ".target1",
+    duration: '250%'
+  }).setTween(work1).addTo(horController);
+
+  var uciScene = new ScrollMagic.Scene({
+    triggerElement: ".target_1",
+    triggerHook: 0,
+    reverse:false
+  }).setTween(uci).addTo(controller).addIndicators();
+
   var tl = new TimelineLite();
-  
-  tl.from('.slideInUp h2', 1, {y: '40', autoAlpha: 0, ease:Power0.easeNone, delay:0.2})
-  
-  var slideParallaxScene = new ScrollMagic.Scene({
-      triggerElement: '.slideInUp', 
-      triggerHook: 1
+
+  tl.from('.slideInUp h2', 1, {
+    y: '40',
+    autoAlpha: 0,
+    ease: Power0.easeNone,
+    delay: 0.2
   })
-  .setTween(tl)
-  .addTo(controller);
 
-  	var horizontalMoveTl = new TimelineMax();
+  var slideParallaxScene = new ScrollMagic.Scene({
+      triggerElement: '.slideInUp',
+      triggerHook: 1
+    })
+    .setTween(tl)
+    .addTo(controller);
 
-	horizontalMoveTl
-		.to('.horizontal-container', 1, {x: '-66.6666%', ease:Linear.easeNone});
+  var horizontalMoveTl = new TimelineMax();
 
-	var pinMainScene = new ScrollMagic.Scene({
-		triggerElement: '#experience_school',
-		triggerHook: 0,
-		duration: '300%'
-	})
-	.setTween(horizontalMoveTl)
-	.setPin('#experience_school')
-	.addTo(controller);
-  
+  horizontalMoveTl
+    .to('.horizontal-container', 1, {
+      x: '-66.6666%',
+      ease: Linear.easeNone
+    });
+
+  var pinMainScene = new ScrollMagic.Scene({
+      triggerElement: '#experience_school',
+      triggerHook: 0,
+      duration: '300%'
+    })
+    .setTween(horizontalMoveTl)
+    .setPin('#experience_school')
+    .addTo(controller);
+
 
   // Scene 1 - pin the second section
   var pinScene01 = new ScrollMagic.Scene({
@@ -104,7 +132,7 @@ $(document).ready(function () {
   editor3.setTheme("ace/theme/monokai");
   editor4.session.setUseWrapMode(true);
   editor4.setTheme("ace/theme/monokai");
-  
+
   editor.setValue(`
 /* Since little, Marcos loved playing with legos. He loved the fact that the potential to build something was never-ending. */
   var planning = "identifies the goals or objectives to be achieved.";
@@ -164,7 +192,7 @@ var gunpla = {
     }
 };`);
   editor2.setValue(
-  `
+    `
 
 /* Marcos Loves Video Games, specially the ones that requires critical thinking. His Favorite Game is The Legend Of Zelda series,  Zelda games have always been known for being puzzle-filled action adventure games */
 var exploration = "the action of traveling in or through an unfamiliar area in order to learn about it.";
@@ -184,7 +212,7 @@ var zelda = {
 };`
   );
   editor4.setValue(
-  `
+    `
 
 /* Marcos is a passionate Developer. His loves towards Coding came from his passions in legos, gundams and video games.*/
 var marcos = {

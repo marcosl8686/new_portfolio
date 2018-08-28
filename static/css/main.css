@@ -33,9 +33,11 @@ fieldset {
 textarea {
   resize: vertical;
 }
+
 .dont-display {
   display: none;
 }
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -47,7 +49,6 @@ textarea {
 /* ===== ScrollMagic Class ==============================================
    ========================================================================== */
 
- 
 .wrapper {
   max-width: 350px;
   margin: 0 10%;
@@ -71,26 +72,32 @@ body {
 
 /* =Main */
 
-#slide01, #slide03, #slide05 {
-  background-color: #FFFFFF; 
+#slide01,
+#slide03,
+#slide05 {
+  background-color: #FFFFFF;
 }
 
 #slide01 {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.4)), to(rgba(0,0,0,0.4))), url(../img/lego-background.png);
-  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../img/lego-background.png);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(../img/lego-background.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/lego-background.png);
 }
+
 #slide02 {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.4)), to(rgba(0,0,0,0.4))), url(../img/The-Legend-of-Zelda-Twilight-Princess-HD-4K-Wallpaper-2.jpg);
-  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../img/The-Legend-of-Zelda-Twilight-Princess-HD-4K-Wallpaper-2.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(../img/The-Legend-of-Zelda-Twilight-Princess-HD-4K-Wallpaper-2.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/The-Legend-of-Zelda-Twilight-Princess-HD-4K-Wallpaper-2.jpg);
 }
+
 #slide03 {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.4)), to(rgba(0,0,0,0.4))), url(../img/gundam_01.jpg);
-  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../img/gundam_01.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(../img/gundam_01.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/gundam_01.jpg);
 }
+
 #slide04 {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.4)), to(rgba(0,0,0,0.4))), url(../img/hannah-marcos-en-491.jpg);
-  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../img/hannah-marcos-en-491.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(../img/hannah-marcos-en-491.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/hannah-marcos-en-491.jpg);
 }
+
 #slide00,
 #slide01,
 #slide02,
@@ -136,6 +143,7 @@ body {
   height: 500px;
   margin-left: -30%
 }
+
 .about-title {
   font-size: 35px;
   line-height: 45px;
@@ -245,57 +253,64 @@ body {
 /*SideSlide CSS*/
 
 #experience_school {
-    overflow: hidden;
-    color: #333;
+  overflow: hidden;
+  color: #333;
 }
+
 .horizontal-container {
-    width: 300%;
-    height: 100vh;
-    position: relative;
+  width: 300%;
+  height: 100vh;
+  position: relative;
 }
+
 .section-horizontal {
-    width: 33.3333%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
+
 .section-1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 33.3333%;
-    bottom: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
+
 .section-2 {
-    position: absolute;
-    top: 0;
-    left: 33.3333%;
-    right: 66.6666%;
-    bottom: 0;
+  position: absolute;
+  top: 0;
+  left: 33.3333%;
+  right: 66.6666%;
+  bottom: 0;
 }
+
 .section-3 {
-    position: absolute;
-    top: 0;
-    left: 66.6666%;
-    right: 100%;
-    bottom: 0;
+  position: absolute;
+  top: 0;
+  left: 66.6666%;
+  right: 100%;
+  bottom: 0;
 }
+
 .section-1,
 .section-2,
 .section-3 {
-  background-image: url(../img/full_background.png);
   color: #333;
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   background-position: center center;
-  background-size:cover;
+  background-size: cover;
 }
+
 .section-horizontal .content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
 .wrapper {
-    width: 90%;
-    margin: 0 5%;
+  width: 90%;
+  margin: 0 5%;
 }
 
 /* ==========================================================================
@@ -303,68 +318,69 @@ body {
    ========================================================================== */
 
 .ir {
-    background-color: transparent;
-    border: 0;
-    overflow: hidden;
-    *text-indent: -9999px;
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  *text-indent: -9999px;
 }
 
 .ir:before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 150%;
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
 }
 
 .hidden {
-    display: none !important;
-    visibility: hidden;
+  display: none !important;
+  visibility: hidden;
 }
 
 .visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
 }
 
 .invisible {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 .clearfix:before,
 .clearfix:after {
-    content: " ";
-    display: table;
+  content: " ";
+  display: table;
 }
 
 .clearfix:after {
-    clear: both;
+  clear: both;
 }
 
 .clearfix {
-    *zoom: 1;
+  *zoom: 1;
 }
 
 #mychar {
-    position: absolute;
-    bottom: 10%;
-    left: 10%;
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
 }
+
 .an_trigger {
   z-index: 100;
   position: absolute;
@@ -376,9 +392,11 @@ body {
 }
 
 /*animation*/
+
 #section07 a {
   padding-top: 80px;
 }
+
 #section07 a span {
   position: absolute;
   top: 0;
@@ -395,20 +413,24 @@ body {
   opacity: 0;
   box-sizing: border-box;
 }
+
 #section07 a span:nth-of-type(1) {
   -webkit-animation-delay: 0s;
   animation-delay: 0s;
 }
+
 #section07 a span:nth-of-type(2) {
   top: 16px;
   -webkit-animation-delay: .15s;
   animation-delay: .15s;
 }
+
 #section07 a span:nth-of-type(3) {
   top: 32px;
   -webkit-animation-delay: .3s;
   animation-delay: .3s;
 }
+
 @-webkit-keyframes sdb07 {
   0% {
     opacity: 0;
@@ -420,6 +442,7 @@ body {
     opacity: 0;
   }
 }
+
 @keyframes sdb07 {
   0% {
     opacity: 0;
@@ -431,6 +454,7 @@ body {
     opacity: 0;
   }
 }
+
 #section07 a {
   position: absolute;
   bottom: 20px;
@@ -440,11 +464,131 @@ body {
   -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
   color: #fff;
-  font : normal 400 20px/1 'Josefin Sans', sans-serif;
+  font: normal 400 20px/1 'Josefin Sans', sans-serif;
   letter-spacing: .1em;
   text-decoration: none;
   transition: opacity .3s;
 }
+
 #section07 a:hover {
   opacity: .5;
 }
+
+
+/* ---- Timeline ---- */
+
+.cd-horizontal-timeline ol {
+  position: relative;
+  display: block;
+  margin: 100px;
+  height: 4px;
+  background: #31708F;
+  top: 70%;
+  width: 90%;
+}
+
+.cd-horizontal-timeline ol::before,
+.cd-horizontal-timeline ol::after {
+  content: "";
+  position: absolute;
+  top: -8px;
+  display: block;
+  width: 0;
+  height: 0;
+  border-radius: 10px;
+  border: 10px solid #31708F;
+}
+
+.cd-horizontal-timeline ol::before {
+  left: -5px;
+}
+
+.cd-horizontal-timeline ol::after {
+  right: -10px;
+  border: 10px solid transparent;
+  border-right: 0;
+  border-left: 20px solid #31708F;
+  border-radius: 3px;
+}
+
+/* ---- Timeline elements ---- */
+
+.cd-horizontal-timeline li {
+  position: relative;
+  display: inline-block;
+  float: left;
+  width: 20%;
+  font: bold 14px arial;
+  height: 50px;
+}
+
+.cd-horizontal-timeline li .diplome {
+  position: absolute;
+  top: -60px;
+  left: 36%;
+  color: #000000;
+}
+.experience_img {
+  position: absolute;
+  top: -280px;
+  width: 200px;
+  left: 35%
+}
+.cd-horizontal-timeline li .point {
+  content: "";
+  top: -4px;
+  left: 43%;
+  display: block;
+  width: 6px;
+  height: 6px;
+  border: 4px solid #31708F;
+  border-radius: 10px;
+  background: #fff;
+  position: absolute;
+}
+
+.cd-horizontal-timeline li .description {
+  display: none;
+  background-color: #f4f4f4;
+  padding: 10px;
+  margin-top: 20px;
+  position: relative;
+  font-weight: normal;
+  z-index: 1;
+}
+
+.cd-horizontal-timeline .description::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #f4f4f4;
+  position: absolute;
+  top: -5px;
+  left: 43%;
+}
+
+/* ---- Hover effects ---- */
+
+.cd-horizontal-timeline li:hover {
+  cursor: pointer;
+  color: #48A4D2;
+}
+
+.cd-horizontal-timeline li:hover .description {
+  display: block;
+}
+
+.grass {
+  background-image: url(../../static/img/grass.gif);
+  position: absolute;
+  height: 32px;
+  width: 100%;
+  bottom: 0px;
+}
+.clouds {
+  height: 100%;
+  text-align: center;
+  background-image: url(../../static/img/clouds.gif);
+}    
