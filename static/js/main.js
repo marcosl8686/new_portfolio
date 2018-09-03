@@ -8,7 +8,7 @@ $(document).ready(function () {
     vertical: false
   });
 
-  var work1 = TweenMax.to('#mychar', 0.5, {
+  var character = TweenMax.to('#mychar', 0.5, {
     x: "+=3500",
     ease: Linear.easeNone
   });
@@ -21,15 +21,33 @@ $(document).ready(function () {
 
   var work1Scene = new ScrollMagic.Scene({
     triggerElement: ".target1",
-    duration: '250%'
-  }).setTween(work1).addTo(horController);
+    duration: '250%',
+    triggerHook:1
+  }).setTween(character).addTo(horController)
 
   var uciScene = new ScrollMagic.Scene({
     triggerElement: ".target_1",
-    triggerHook: 0,
+    triggerHook: 0.1,
     reverse:false
-  }).setTween(uci).addTo(controller).addIndicators();
+  }).setTween(uci).addTo(horController).addIndicators()
 
+  
+  var charImages = ["static/img/Marcos.png","static/img/Marcos2.png"]
+  var charObj = {curImg:0}
+  
+  var charTween = TweenMax.to(charObj, 0.5, {
+    curImg: charImages.length -1,
+    roundProps:"curImg",
+    repeat:15,
+    immediateRender: true,
+    ease:Linear.easeNone,
+    onUpdate:function() {
+      $('#mychar').attr('src', charImages[charObj.curImg]);
+    }
+  });
+  
+  var charScene = new ScrollMagic.Scene({triggerElement: ".target1", duration: '250%',triggerHook: 1}).setTween(charTween).addTo(horController);
+  
   var tl = new TimelineLite();
 
   tl.from('.slideInUp h2', 1, {
@@ -134,6 +152,7 @@ $(document).ready(function () {
   editor4.setTheme("ace/theme/monokai");
 
   editor.setValue(`
+
 /* Since little, Marcos loved playing with legos. He loved the fact that the potential to build something was never-ending. */
   var planning = "identifies the goals or objectives to be achieved.";
   var problemSolving = "using generic or ad hoc methods, in an orderly manner, for finding solutions to problems.";
@@ -162,8 +181,16 @@ $(document).ready(function () {
       organization,
       designAndArchitecture
     }
-  };`);
+  };
+  /* Legos helped Marcos to gain:
+
+  1. Creativity: he learned to design and prototype projects.
+
+  2. Organization: to identify goals and develop problem solving skills.
+
+  3. Persistence: to endure spite of difficulty. */`);
   editor3.setValue(`
+
 /* Marcos is also passionate about Gunpla.
 Gunpla not only challanges his precision and detailing skills, but also allows him to be artistic. He loves painting each model differently making them unique */
 var fs = require("fs");
@@ -190,7 +217,15 @@ var gunpla = {
         followInstruction,
         enhance
     }
-};`);
+};
+
+/* Skills gained from Gunpla:
+
+1. Process: Following instruction.
+
+2. Effort: ability to fully concentrate in a project.
+
+3. Enhance: implementing own ideas to improve project. */`);
   editor2.setValue(
     `
 
@@ -209,7 +244,15 @@ var zelda = {
 		concept,
 		senseOfAchievement
 	}
-};`
+};
+
+/* Zelda Games allowed Marcos to:
+
+1. Improve Problem Solving Skills.
+
+2. Identify problem and look for possible solutions.
+
+3. Implement solutions. */`
   );
   editor4.setValue(
     `
