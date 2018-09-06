@@ -1,5 +1,16 @@
 $(document).ready(function () {
-
+  var animatedMovement = "+=4500";
+  console.log($(window).width())
+  if($(window).width() < 992 & $(window).width() > 767) {
+    animatedMovement = "+=2500"
+    console.log(animatedMovement, $(window).width())
+  } else if ($(window).width() < 768 & $(window).width() > 575) {
+    animatedMovement = "+=1500"
+    console.log(animatedMovement, $(window).width())
+  } else if ($(window).width() < 576) {
+    animatedMovement = "+=1200"
+    console.log(animatedMovement, $(window).width())
+  }
 
   // Init ScrollMagic
   var controller = new ScrollMagic.Controller();
@@ -9,7 +20,7 @@ $(document).ready(function () {
   });
 
   var character = TweenMax.to('#mychar', 0.5, {
-    x: "+=3500",
+    x: animatedMovement,
     ease: Linear.easeNone
   });
 
