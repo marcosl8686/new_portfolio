@@ -1,16 +1,7 @@
 $(document).ready(function () {
-  var animatedMovement = "+=4500";
-  console.log($(window).width())
-  if($(window).width() < 992 & $(window).width() > 767) {
-    animatedMovement = "+=2500"
-    console.log(animatedMovement, $(window).width())
-  } else if ($(window).width() < 768 & $(window).width() > 575) {
-    animatedMovement = "+=1500"
-    console.log(animatedMovement, $(window).width())
-  } else if ($(window).width() < 576) {
-    animatedMovement = "+=1200"
-    console.log(animatedMovement, $(window).width())
-  }
+  var animatedMovement = "+=" + $(window).width() * 2.9;
+  console.log(animatedMovement)
+
 
   // Init ScrollMagic
   var controller = new ScrollMagic.Controller();
@@ -18,35 +9,96 @@ $(document).ready(function () {
   var horController = new ScrollMagic.Controller({
     vertical: false
   });
-
+  
+  //Marcos Avatar Movement
   var character = TweenMax.to('#mychar', 0.5, {
     x: animatedMovement,
     ease: Linear.easeNone
   });
-
+  //Marcos Avatar Stats
+  var character_stats = TweenMax.to('.character_stats', 0.5, {
+    x: animatedMovement,
+    ease: Linear.easeNone
+  });
+  //UCI logo pop-up
   var uci = TweenMax.from('.uci_logo', 0.5, {
     scale: 0,
     autoAlpha: 0,
     ease: Bounce.easeOut
   });
+  //Lush logo pop-up
+  var lush = TweenMax.from('.lush_logo', 0.5, {
+    scale: 0,
+    autoAlpha: 0,
+    ease: Bounce.easeOut
+  });
+  //ucla logo pop-up
+  var ucla = TweenMax.from('.ucla_logo', 0.5, {
+    scale: 0,
+    autoAlpha: 0,
+    ease: Bounce.easeOut
+  });
+  //Trilogy logo pop-up
+  var trilogy = TweenMax.from('.trilogy_logo', 0.5, {
+    scale: 0,
+    autoAlpha: 0,
+    ease: Bounce.easeOut
+  });
+  //LivingSpaces logo pop-up
+  var ls = TweenMax.from('.ls_logo', 0.5, {
+    scale: 0,
+    autoAlpha: 0,
+    ease: Bounce.easeOut
+  });
 
+  //Marcos Avator Movement Scene
   var work1Scene = new ScrollMagic.Scene({
     triggerElement: ".target1",
     duration: '250%',
     triggerHook:1
-  }).setTween(character).addTo(horController)
-
+  }).setTween(character).addTo(horController);
+    //Marcos Avator Stats Movement Scene
+  var work1Scene = new ScrollMagic.Scene({
+    triggerElement: ".target1",
+    duration: '250%',
+    triggerHook:1
+  }).setTween(character_stats).addTo(horController);
+  //Experience Pop-up Scene - UCI
   var uciScene = new ScrollMagic.Scene({
     triggerElement: ".target_1",
-    triggerHook: 0.1,
+    triggerHook: 0.2,
     reverse:false
-  }).setTween(uci).addTo(horController).addIndicators()
+  }).setTween(uci).addTo(horController);
+  //Experience Pop-up Scene - Lush
+  var uciScene = new ScrollMagic.Scene({
+    triggerElement: ".target_2",
+    triggerHook: 0.25,
+    reverse:false
+  }).setTween(lush).addTo(horController);
+  //Experience Pop-up Scene - UCLA
+  var uciScene = new ScrollMagic.Scene({
+    triggerElement: ".target_3",
+    triggerHook: 0.27,
+    reverse:false
+  }).setTween(ucla).addTo(horController);
+  //Experience Pop-up Scene - Trilogy
+  var uciScene = new ScrollMagic.Scene({
+    triggerElement: ".target_4",
+    triggerHook: 0.3,
+    reverse:false
+  }).setTween(trilogy).addTo(horController);
+  //Experience Pop-up Scene - Living Spaces
+  var uciScene = new ScrollMagic.Scene({
+    triggerElement: ".target_5",
+    triggerHook: 0.4,
+    reverse:false
+  }).setTween(ls).addTo(horController);
 
   
-  var charImages = ["static/img/Marcos.png","static/img/Marcos2.png"]
+  var charImages = ["static/img/Marcos_1.png","static/img/Marcos_2.png"]
   var charObj = {curImg:0}
   
-  var charTween = TweenMax.to(charObj, 0.5, {
+  var charTween = TweenMax.to(charObj, 01, {
     curImg: charImages.length -1,
     roundProps:"curImg",
     repeat:15,
@@ -56,8 +108,55 @@ $(document).ready(function () {
       $('#mychar').attr('src', charImages[charObj.curImg]);
     }
   });
+  //Level Up Design by AngieFeret
+  var jumpChar = TweenMax.to(charObj, 01, {
+    immediateRender: true,
+    ease:Linear.easeNone,
+    y: '+=1000',
+    onUpdate:function() {
+      $('#mychar').attr('src', 'static/img/Marcos_3.png');
+    }
+  });
+   var jumpChar2 = TweenMax.to(charObj, 01, {
+    immediateRender: true,
+    ease:Linear.easeNone,
+    y: '+=1000',
+    onUpdate:function() {
+      $('#mychar').attr('src', 'static/img/Marcos_3.png');
+    }
+  });
+   var jumpChar3 = TweenMax.to(charObj, 01, {
+    immediateRender: true,
+    ease:Linear.easeNone,
+    y: '+=1000',
+    onUpdate:function() {
+      $('#mychar').attr('src', 'static/img/Marcos_3.png');
+    }
+  });
+   var jumpChar4 = TweenMax.to(charObj, 01, {
+    immediateRender: true,
+    ease:Linear.easeNone,
+    y: '+=1000',
+    onUpdate:function() {
+      $('#mychar').attr('src', 'static/img/Marcos_3.png');
+    }
+  });
+   var jumpChar5 = TweenMax.to(charObj, 01, {
+    immediateRender: true,
+    ease:Linear.easeNone,
+    y: '+=1000',
+    onUpdate:function() {
+      $('#mychar').attr('src', 'static/img/Marcos_3.png');
+    }
+  });
   
   var charScene = new ScrollMagic.Scene({triggerElement: ".target1", duration: '250%',triggerHook: 1}).setTween(charTween).addTo(horController);
+  
+  var jumpScene_uci = new ScrollMagic.Scene({triggerElement: ".target_1", duration: '10%',triggerHook: 0.2}).setTween(jumpChar).addTo(horController)
+  var jumpScene_lush = new ScrollMagic.Scene({triggerElement: ".target_2", duration: '10%',triggerHook: 0.25}).setTween(jumpChar2).addTo(horController)
+  var jumpScene_ucla = new ScrollMagic.Scene({triggerElement: ".target_3", duration: '10%',triggerHook: 0.27}).setTween(jumpChar3).addTo(horController)
+  var jumpScene_trilogy = new ScrollMagic.Scene({triggerElement: ".target_4", duration: '10%',triggerHook: 0.3}).setTween(jumpChar4).addTo(horController)
+  var jumpScene_ls = new ScrollMagic.Scene({triggerElement: ".target_5", duration: '10%',triggerHook: 0.4}).setTween(jumpChar5).addTo(horController).addIndicators();
   
   var tl = new TimelineLite();
 
@@ -86,7 +185,7 @@ $(document).ready(function () {
   var pinMainScene = new ScrollMagic.Scene({
       triggerElement: '#experience_school',
       triggerHook: 0,
-      duration: '300%'
+      duration: '450%'
     })
     .setTween(horizontalMoveTl)
     .setPin('#experience_school')
@@ -155,15 +254,26 @@ $(document).ready(function () {
   });
   editor.session.setUseWrapMode(true);
   editor.setTheme("ace/theme/monokai");
+  editor.setOptions({
+    fontSize: "13pt"
+  });
   editor2.session.setUseWrapMode(true);
   editor2.setTheme("ace/theme/monokai");
+  editor2.setOptions({
+    fontSize: "13pt"
+  });
   editor3.session.setUseWrapMode(true);
   editor3.setTheme("ace/theme/monokai");
+  editor3.setOptions({
+    fontSize: "13pt"
+  });
   editor4.session.setUseWrapMode(true);
   editor4.setTheme("ace/theme/monokai");
+  editor4.setOptions({
+    fontSize: "13pt"
+  });
 
   editor.setValue(`
-
 /* Since little, Marcos loved playing with legos. He loved the fact that the potential to build something was never-ending. */
   var planning = "identifies the goals or objectives to be achieved.";
   var problemSolving = "using generic or ad hoc methods, in an orderly manner, for finding solutions to problems.";
@@ -194,14 +304,10 @@ $(document).ready(function () {
     }
   };
   /* Legos helped Marcos to gain:
-
   1. Creativity: he learned to design and prototype projects.
-
   2. Organization: to identify goals and develop problem solving skills.
-
   3. Persistence: to endure spite of difficulty. */`);
   editor3.setValue(`
-
 /* Marcos is also passionate about Gunpla.
 Gunpla not only challanges his precision and detailing skills, but also allows him to be artistic. He loves painting each model differently making them unique */
 var fs = require("fs");
@@ -231,15 +337,11 @@ var gunpla = {
 };
 
 /* Skills gained from Gunpla:
-
 1. Process: Following instruction.
-
 2. Effort: ability to fully concentrate in a project.
-
 3. Enhance: implementing own ideas to improve project. */`);
   editor2.setValue(
     `
-
 /* Marcos Loves Video Games, specially the ones that requires critical thinking. His Favorite Game is The Legend Of Zelda series,  Zelda games have always been known for being puzzle-filled action adventure games */
 var exploration = "the action of traveling in or through an unfamiliar area in order to learn about it.";
 var puzzle = "problem designed to test ingenuity or knowledge.";
@@ -258,16 +360,12 @@ var zelda = {
 };
 
 /* Zelda Games allowed Marcos to:
-
 1. Improve Problem Solving Skills.
-
 2. Identify problem and look for possible solutions.
-
 3. Implement solutions. */`
   );
   editor4.setValue(
     `
-
 /* Marcos is a passionate Developer. His loves towards Coding came from his passions in legos, gundams and video games.*/
 var marcos = {
 	bornIn: "Asuncion Paraguay",
@@ -295,4 +393,8 @@ var marcos = {
   editor2.setShowPrintMargin(false);
   editor3.setShowPrintMargin(false);
   editor4.setShowPrintMargin(false);
+  editor.getSession().setUseWorker(false);
+  editor2.getSession().setUseWorker(false);
+  editor3.getSession().setUseWorker(false);
+  editor4.getSession().setUseWorker(false);
 });
