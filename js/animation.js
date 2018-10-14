@@ -255,22 +255,22 @@ $(document).ready(function () {
     editor.session.setUseWrapMode(true);
     editor.setTheme("ace/theme/monokai");
     editor.setOptions({
-      fontSize: "1.6rem"
+      
     });
     editor2.session.setUseWrapMode(true);
     editor2.setTheme("ace/theme/monokai");
     editor2.setOptions({
-      fontSize: "1.6rem"
+      
     });
     editor3.session.setUseWrapMode(true);
     editor3.setTheme("ace/theme/monokai");
     editor3.setOptions({
-      fontSize: "1.6rem"
+      
     });
     editor4.session.setUseWrapMode(true);
     editor4.setTheme("ace/theme/monokai");
     editor4.setOptions({
-      fontSize: "1.6rem"
+      
     });
   
     editor.setValue(`
