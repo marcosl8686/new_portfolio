@@ -242,6 +242,7 @@
     position: absolute;
     bottom: 32px;
     left: 0%;
+    width: 5%;
   }
   
   .character_stats {
@@ -262,6 +263,7 @@
     font-family: 'Open Sans', sans-serif;
     font-size: 1.6rem;
     white-space: pre;
+    margin: 0;
   }
   /******** PIXEL BORDER ********/
   
@@ -446,8 +448,8 @@
   
   .experience_img {
     position: absolute;
-    top: -280px;
-    width: 200px;
+    top: -460%;
+    width: 20%;
     left: 35%
   }
   
