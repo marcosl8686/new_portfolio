@@ -112,6 +112,9 @@ $(document).ready(function () {
     var jumpChar = TweenMax.to(charObj, 01, {
       immediateRender: true,
       ease:Linear.easeNone,
+      onStart: function() {
+        updateLevelUpStats();
+      },
       y: '+=1000',
       onUpdate:function() {
         $('#mychar').attr('src', 'img/Marcos_3.png');
@@ -149,6 +152,21 @@ $(document).ready(function () {
         $('#mychar').attr('src', 'img/Marcos_3.png');
       }
     });
+
+
+    function updateLevelUpStats() {
+      var charLevel = $('#char_level'),
+          charHp = $('#char_hp'),
+          charMp = $('#char_mp')
+          jumpCount = 1;
+
+          if(jumpCount == 1) {
+            charLevel.text("LvL 10");
+            charHp.text("HP 1150/1150");
+            charMp.text()
+          }
+
+    }
     
     var charScene = new ScrollMagic.Scene({triggerElement: ".target1", duration: '250%',triggerHook: 1}).setTween(charTween).addTo(horController);
     
@@ -156,7 +174,7 @@ $(document).ready(function () {
     var jumpScene_lush = new ScrollMagic.Scene({triggerElement: ".target_2", duration: '10%',triggerHook: 0.25}).setTween(jumpChar2).addTo(horController)
     var jumpScene_ucla = new ScrollMagic.Scene({triggerElement: ".target_3", duration: '10%',triggerHook: 0.27}).setTween(jumpChar3).addTo(horController)
     var jumpScene_trilogy = new ScrollMagic.Scene({triggerElement: ".target_4", duration: '10%',triggerHook: 0.3}).setTween(jumpChar4).addTo(horController)
-    var jumpScene_ls = new ScrollMagic.Scene({triggerElement: ".target_5", duration: '10%',triggerHook: 0.4}).setTween(jumpChar5).addTo(horController).addIndicators();
+    var jumpScene_ls = new ScrollMagic.Scene({triggerElement: ".target_5", duration: '10%',triggerHook: 0.4}).setTween(jumpChar5).addTo(horController);
     
     var tl = new TimelineLite();
   
@@ -398,3 +416,56 @@ $(document).ready(function () {
     editor3.getSession().setUseWorker(false);
     editor4.getSession().setUseWorker(false);
   });
+
+  //Background Animation
+
+  // var $target = $('.about_wrapper');
+  // inView.offset(500);
+  // inView('.slide').on('enter', function(el){
+  //   console.log(el, "target")
+  //   var color = $(el).attr('data-background-color');
+  //   $target.css('background-color', color );
+  // })
+
+
+  var controller2 = new ScrollMagic.Controller();
+
+  var wipeAnimation = new TimelineMax()
+    //second panel
+    .to("#slideContainer", 0.5, {z:-150})
+    .to("#slideContainer", 1, {x:"-25%"})
+    .to("#slideContainer", 0.5, {z:0})
+    //third panel
+    .to("#slideContainer", 0.5, {z:-150, delay:1})
+    .to("#slideContainer", 1, {x:"-50%"})
+    .to("#slideContainer", 0.5, {z:0})
+    //forth panel
+    .to("#slideContainer", 0.5, {z:-150, delay:1})
+    .to("#slideContainer", 1, {x:"-75%"})
+    .to("#slideContainer", 0.5, {z:0});
+
+new ScrollMagic.Scene({
+  triggerElement: "#pinContainer",
+  triggerHook: "onLeave",
+  duration: "300%"
+}).setPin("#pinContainer").setTween(wipeAnimation).addTo(controller2);
+
+  // var wipeAnimation = new TimelineMax()
+  //       .fromTo("section.panel.red", 1, {x: "-100%"}, {x:"0%", ease: Linear.easeNone})
+  //       .fromTo("section.panel.orange", 1, {x:"100%"}, {x:"0%", ease: Linear.easeNone})
+  //       .fromTo("section.panel.yellow", 1, {x:"100%"}, {x:"0%", ease: Linear.easeNone});
+  // new ScrollMagic.Scene({
+  //   triggerElement: "#pinContainer",
+  //   triggerHook: "onLeave",
+  //   duration: "300%"
+  // }).setPin("#pinContainer").setTween(wipeAnimation).addTo(controller2);
+	var animData = {
+		wrapper: document.querySelector('#animationWindow'),
+		animType: 'svg',
+		loop: true,
+		prerender: true,
+		autoplay: true,
+		path: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/35984/LEGO_loader.json'
+	};
+	var anim = bodymovin.loadAnimation(animData);
+anim.setSpeed(3.4);

@@ -14,11 +14,10 @@
 
 /* =Main */
 
-#slide01,
-#slide03,
-#slide05 {
-  background-color: #FFFFFF;
-}
+/* #slide02,
+#slide04 {
+  background-color: #fafafa;
+} */
 
 /* #slide01 {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(../img/lego-background.png);
@@ -39,16 +38,24 @@
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(../img/hannah-marcos-en-491.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/hannah-marcos-en-491.jpg);
 } */
-
-#slide00,
-#slide01,
-#slide02,
-#slide03,
-#slide04 {
+.slide {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+}
+.about_wrapper {
+  transition: background 1s ease;
+  position: relative;
+}
+
+.bg_img {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  
 }
 
 #slide00,
@@ -113,8 +120,49 @@
 }
 
 
+/* #pinContainer {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.panel {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+} */
 
-
+#pinContainer {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  -webkit-perspective: 1000;
+  perspective: 1000;
+}
+#slideContainer {
+  width: 400%;
+  height: 100vh;
+}
+.panel {
+  height: 100%;
+  width: 25%;
+  float: left;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.lego {
+  background-image: url(../img/lego_bg.jpg);
+}
+.zelda_bg {
+  background-image: url(../img/zelda-wallpaper.png);
+}
+.gundam {
+  background-image: url(../img/gundam_bg.jpg);
+  background-position: top right;
+}
+.marcos {
+  background-image: url(../img/marcos_bg2.jpg);
+}
 
 
 
@@ -248,7 +296,7 @@
   .character_stats {
     position: absolute;
     top: 5%;
-    left: 0%;
+    left: -4%;
   }
   .main_stats {
     display: inline-block;
