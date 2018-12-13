@@ -1,3 +1,6 @@
+
+var jumpCount = 1;
+
 $(document).ready(function () {
     var animatedMovement = "+=" + $(window).width() * 2.9;
     console.log(animatedMovement)
@@ -124,6 +127,9 @@ $(document).ready(function () {
       immediateRender: true,
       ease:Linear.easeNone,
       y: '+=1000',
+      onStart: function() {
+        updateLevelUpStats();
+      },
       onUpdate:function() {
         $('#mychar').attr('src', 'img/Marcos_3.png');
       }
@@ -132,6 +138,9 @@ $(document).ready(function () {
       immediateRender: true,
       ease:Linear.easeNone,
       y: '+=1000',
+      onStart: function() {
+        updateLevelUpStats();
+      },
       onUpdate:function() {
         $('#mychar').attr('src', 'img/Marcos_3.png');
       }
@@ -140,6 +149,9 @@ $(document).ready(function () {
       immediateRender: true,
       ease:Linear.easeNone,
       y: '+=1000',
+      onStart: function() {
+        updateLevelUpStats();
+      },
       onUpdate:function() {
         $('#mychar').attr('src', 'img/Marcos_3.png');
       }
@@ -148,6 +160,9 @@ $(document).ready(function () {
       immediateRender: true,
       ease:Linear.easeNone,
       y: '+=1000',
+      onStart: function() {
+        updateLevelUpStats();
+      },
       onUpdate:function() {
         $('#mychar').attr('src', 'img/Marcos_3.png');
       }
@@ -158,14 +173,37 @@ $(document).ready(function () {
       var charLevel = $('#char_level'),
           charHp = $('#char_hp'),
           charMp = $('#char_mp')
-          jumpCount = 1;
 
-          if(jumpCount == 1) {
-            charLevel.text("LvL 10");
-            charHp.text("HP 1150/1150");
-            charMp.text()
+          switch(jumpCount) {
+            case 1:
+              charLevel.text("LvL 10");
+              charHp.text("HP 1150/1150");
+              charMp.text("MP 480/480");
+              break;
+            case 2:
+              charLevel.text("LvL 25");
+              charHp.text("HP 2850/2850");
+              charMp.text("MP 580/580");
+              break;
+            case 3: 
+              charLevel.text("LvL 60");
+              charHp.text("HP 6200/6200");
+              charMp.text("MP 680/680");
+              break;
+            case 4: 
+              charLevel.text("LvL 75");
+              charHp.text("HP 7100/7100");
+              charMp.text("MP 750/750");
+              break;
+            case 5: 
+              charLevel.text("LvL 88");
+              charHp.text("HP 8900/8900");
+              charMp.text("MP 860/860");
+              break;
           }
-
+          if(jumpCount < 6) {
+            jumpCount++;
+          }
     }
     
     var charScene = new ScrollMagic.Scene({triggerElement: ".target1", duration: '250%',triggerHook: 1}).setTween(charTween).addTo(horController);
@@ -449,23 +487,3 @@ new ScrollMagic.Scene({
   triggerHook: "onLeave",
   duration: "300%"
 }).setPin("#pinContainer").setTween(wipeAnimation).addTo(controller2);
-
-  // var wipeAnimation = new TimelineMax()
-  //       .fromTo("section.panel.red", 1, {x: "-100%"}, {x:"0%", ease: Linear.easeNone})
-  //       .fromTo("section.panel.orange", 1, {x:"100%"}, {x:"0%", ease: Linear.easeNone})
-  //       .fromTo("section.panel.yellow", 1, {x:"100%"}, {x:"0%", ease: Linear.easeNone});
-  // new ScrollMagic.Scene({
-  //   triggerElement: "#pinContainer",
-  //   triggerHook: "onLeave",
-  //   duration: "300%"
-  // }).setPin("#pinContainer").setTween(wipeAnimation).addTo(controller2);
-	var animData = {
-		wrapper: document.querySelector('#animationWindow'),
-		animType: 'svg',
-		loop: true,
-		prerender: true,
-		autoplay: true,
-		path: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/35984/LEGO_loader.json'
-	};
-	var anim = bodymovin.loadAnimation(animData);
-anim.setSpeed(3.4);
