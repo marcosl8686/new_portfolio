@@ -295,6 +295,7 @@
     bottom: 32px;
     left: 0%;
     width: 5%;
+    z-index: 10;
   }
   
   .character_stats {
@@ -473,7 +474,13 @@
     left: 36%;
     color: #000000;
   }
-  
+  .building_unit {
+    position: absolute;
+    top: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
   .experience_img {
     position: absolute;
     top: 50%;
