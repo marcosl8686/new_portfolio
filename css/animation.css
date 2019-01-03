@@ -447,13 +447,20 @@
   
   /* ---- Timeline ---- */
   
-  .cd-horizontal-timeline ol {
+  .cd-horizontal-timeline .exp_time {
     position: relative;
     display: block;
     margin: 100px;
     height: 4px;
     top: 50%;
     width: 90%;
+  }
+  .cd-horizontal-timeline .building_time {
+    position: absolute;
+    margin: 0%;
+    bottom: 0;
+    width: 90%;
+    display: block;
   }
   
   
@@ -476,8 +483,8 @@
   }
   .building_unit {
     position: absolute;
-    top: 32px;
-    left: 50%;
+    bottom: 32px;
+    left: 65%;
     transform: translateX(-50%);
     z-index: 1;
   }
