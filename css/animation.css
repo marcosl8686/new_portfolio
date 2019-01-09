@@ -11,33 +11,6 @@
   }
   /* ==========================================================================
    ========================================================================== */
-
-/* =Main */
-
-/* #slide02,
-#slide04 {
-  background-color: #fafafa;
-} */
-
-/* #slide01 {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(../img/lego-background.png);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/lego-background.png);
-}
-
-#slide02 {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(../img/The-Legend-of-Zelda-Twilight-Princess-HD-4K-Wallpaper-2.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/The-Legend-of-Zelda-Twilight-Princess-HD-4K-Wallpaper-2.jpg);
-}
-
-#slide03 {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(../img/gundam_01.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/gundam_01.jpg);
-}
-
-#slide04 {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(../img/hannah-marcos-en-491.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/hannah-marcos-en-491.jpg);
-} */
 .slide {
   background-attachment: fixed;
   background-position: center;
@@ -87,12 +60,12 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-70%, -40%);
+  transform: translate(-80%, -38%);
 }
 .slide .editor_box {
   
   width: 100%;
-  height: 50vh;
+  height: 68vh;
   
 }
 
@@ -658,14 +631,31 @@
   
   /* ---- Hover effects ---- */
   
-  .cd-horizontal-timeline li:hover {
+  /* .cd-horizontal-timeline li:hover {
     cursor: pointer;
     color: #48A4D2;
   }
   
   .cd-horizontal-timeline li:hover .description {
     display: block;
+  } */
+
+  .popover-example { 
+    margin: 0 0 10px;
+    list-style: none;
   }
+  .popover-example li{
+    display: inline-block;
+    margin: 4px;
+    padding: 0px;
+  }
+  .btn:focus{
+    outline: none;
+  }
+  .modExample .btn{
+      margin: 4px 8px 4px 0;
+  }
+  
   
   .grass {
     background-image: url(../img/grass.gif);

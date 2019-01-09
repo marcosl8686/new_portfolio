@@ -314,7 +314,7 @@ $(document).ready(function () {
       
     });
     editor2.session.setUseWrapMode(true);
-    editor2.setTheme("ace/theme/monokai");
+    editor2.setTheme("ace/theme/sqlserver");
     editor2.setOptions({
       
     });
@@ -324,7 +324,7 @@ $(document).ready(function () {
       
     });
     editor4.session.setUseWrapMode(true);
-    editor4.setTheme("ace/theme/monokai");
+    editor4.setTheme("ace/theme/dracula");
     editor4.setOptions({
       
     });
@@ -487,3 +487,32 @@ new ScrollMagic.Scene({
   triggerHook: "onLeave",
   duration: "300%"
 }).setPin("#pinContainer").setTween(wipeAnimation).addTo(controller2);
+
+
+    // add the animation to the popover
+    $('a[rel=popover]').popover().click(function(e) {
+      e.preventDefault();        
+       var open = $(this).attr('data-easein');
+      if(open == 'shake') {
+                $(this).next().velocity('callout.' + open);
+          } else if(open == 'pulse') {
+            $(this).next().velocity('callout.' + open);
+          } else if(open == 'tada') {
+              $(this).next().velocity('callout.' + open);
+          } else if(open == 'flash') {
+                $(this).next().velocity('callout.' + open);
+          }  else if(open == 'bounce') {
+               $(this).next().velocity('callout.' + open);
+          } else if(open == 'swing') {
+               $(this).next().velocity('callout.' + open);
+          }else {
+           $(this).next().velocity('transition.' + open); 
+          }
+    
+    
+              
+  });
+
+  $(window).resize(function(){location.reload();});
+
+
