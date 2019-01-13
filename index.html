@@ -29,6 +29,7 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
 
     <!-- Favicon -->
     <link rel="icon" href="img/favicon.ico">
@@ -79,7 +80,8 @@
                 <div class="collapse navbar-collapse" id="bm-navbar">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#home" class="scroll effect active" data-speed="800">HOME</a></li>
-                        <li><a href="#about" class="scroll effect" data-speed="1000">ABOUT</a></li>
+                        <li><a href="#about" class="scroll effect" data-speed="1000">THINGS I LOVE</a></li>
+                        <li><a href="#experience_school" class="scroll effect" data-speed="1400">EXPERIENCE</a></li>
                         <li><a href="#services" class="scroll effect" data-speed="1400">SERVICES</a></li>
                         <li><a href="#work" class="scroll effect" data-speed="1400">WORK</a></li>
                         <li><a href="#clients" class="scroll effect" data-speed="1600">CLIENTS</a></li>
@@ -109,7 +111,7 @@
     <!-- END HOME -->
 
     <!-- ABOUT -->
-    <section id="about" class="about_wrapper">
+    <section id="about" class="about_wrapper one-page-section">
         <div id="pinContainer">
             <div id="slideContainer">
                 <section class="panel lego">
@@ -126,31 +128,22 @@
         <div id="main" class="main-container">
 
             <article id="slide01" class="slide" data-background-color="#FDC800">
-                <!-- <img alt="legos" class="img-responsive bg_img" src="img/lego_vw.png"> -->
                 <div class="pin-wrapper">
                     <div class="about-title">
-                        <h1><span>#1.</span> I Love Legos</h1>
+                        <img alt="Lego" src="img/legoLogo.png" class="center-block lego_logo">
                     </div>
                     <div class="editor_wrapper">
                         <img alt="legos" class="img-responsive" src="img/border.jpg">
                         <div id="editor" class="editor_box">
                         </div>
                     </div>
-                    <!--
-              <div class="wrapper dont-display">
-                <h1>TITLE ONE</h1>
-                <p>Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas.</p>
-              </div>
-    -->
-                    <!-- .wrapper -->
                 </div>
             </article>
 
             <article id="slide02" class="slide" data-background-color="#27ae60">
-                <!-- <img alt="Link" class="img-responsive bg_img" src="img/zelda_link.png"> -->
                 <div class="pin-wrapper">
                     <div class="about-title">
-                        <h1><span>#2.</span> Zelda</h1>
+                        <img alt="Zelda" src="img/zeldaLogo.png" class="center-block zelda_logo">
                     </div>
                     <div class="editor_wrapper">
                         <img alt="legos" class="img-responsive" src="img/border.jpg">
@@ -158,34 +151,19 @@
                         </div>
 
                     </div>
-                    <!--
-              <div class="wrapper dont-display">
-                <h1>TITLE TWO</h1>
-                <p>Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus.</p>
-              </div>
-    -->
-                    <!-- .wrapper -->
                 </div>
             </article>
 
             <article id="slide03" class="slide" data-background-color="#f1f1f1">
-                <!-- <img alt="Link" class="img-responsive bg_img" src="img/gundam_freedom.png"> -->
                 <div class="pin-wrapper">
                     <div class="about-title">
-                        <h1><span>#3.</span> Building Gunpla</h1>
+                        <img alt="Gunpla" src="img/gunplaLogo.png" class="center-block gunpla_logo">
                     </div>
 
                     <div class="editor_wrapper">
                         <img alt="legos" class="img-responsive" src="img/border.jpg">
                         <div id="editor3" class="editor_box"></div>
                     </div>
-                    <!--
-              <div class="wrapper">
-                <h1>TITLE THREE</h1>
-                <p>Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in.</p>
-              </div>
-    -->
-                    <!-- .wrapper -->
                 </div>
             </article>
 
@@ -196,13 +174,6 @@
                         <div id="editor4" class="editor_box">
                         </div>
                     </div>
-                    <!--
-              <div class="wrapper">
-                <h1>TITLE FOUR</h1>
-                <p>Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas.</p>
-              </div>
-    -->
-                    <!-- .wrapper -->
                 </div>
             </article>
         </div>
@@ -214,7 +185,7 @@
 
     <!-- .call-to-action -->
     <!-- ========== End Of CTA ========== -->
-    <section id="experience_school" class="experience-container hidden-xs">
+    <section id="experience_school" class="experience-container hidden-xs one-page-section">
         <div class="horizontal-container cd-horizontal-timeline">
             <div class="section-1 section-horizontal">
                 <img id="mychar" class="img-responsive mychar" src="img/Marcos_1.png">
@@ -240,43 +211,82 @@
                     </li>
                     <li>
                         <div class="target_1 jump"></div>
-                        <a class="experience_img uci_logo" data-original-title="From: 2008 to 2010" data-animation="false"
-                            data-easein="perspectiveDownIn" href="#" rel="popover" data-html = "true" data-placement="left" data-content="Major in International Studies and Business.">
-                            <h4>University of Calfornia Irvine</h4>
-                            <img class="img-responsive " src="img/Uci_logo.png" alt="UCI Logo">
+                        <a class="experience_img">
+                                <div class="view hoverView uci_logo">
+                                    <img class="img-responsive  center-block" src="img/Uci_logo.png" alt="UCI Logo">
+                                    <div class="mask">
+                                        <h2>University Of California Irvine</h2>
+                                        <p>Studied International Studies.</p>
+                                        <p>Relevant Class Work: International Business, Fundamentals of Accounting I & II, Analytic Geometry, CalculusI & II, Micro & Macro Economics</p>   
+                                    </div>
+                                </div>
                         </a>
                     </li>
                     <li>
                         <div class="target1"></div>
                         <div class="target_2 jump"></div>
-                        <a class="experience_img lush_logo" data-original-title="From: 2014 to 2017" data-animation="false"
-                            data-easein="perspectiveDownIn" href="#" rel="popover" data-html = "true" data-placement="left" data-content="Shipping Manager. <br /> &#8226; Handled the tasks of supervising shipping and receiving departments. <br /> &#8226; Monitored shipments to ensure customer satisfaction. <br />&#8226; Monitored order progress and inventory levels.">
-                            <h4>Lush Clothing</h4>
-                            <img class="img-responsive" src="img/lush.JPG" alt="Lush Clothing">
+                        <a class="experience_img ">
+                            <div id="all">
+                                <div class="view hoverView lush_logo">
+                                    <img class="img-responsive center-block" src="img/lushWeb.jpg" alt="Lush Clothing">
+                                    <div class="mask">
+                                        <h2>Lush</h2>
+                                        <p>Shipping Mannager.</p>
+                                        <p>Handled the tasks of supervising shipping and receiving departments.</p>
+                                        <p>Accurately ran daily end of day audits for open and shipped orders correcting discrepancies</p>
+                                        <p>Maintained staffing levels; recruited, trained and disciplined employees</p>
+                                    </div>
+                                </div>
+                            </div>
+
                         </a>
                     </li>
                     <li>
                         <div class="target_3 jump"></div>
-                        <a class="experience_img ucla_logo" data-original-title="From: 2017 to 2018" data-animation="false"
-                            data-easein="perspectiveDownIn" href="#" rel="popover" data-placement="left"data-html = "true"  data-content="Designing And Building Web Applications. Skills Learned Consisted Of HTML5, CSS3, Javascript, JQuery, Bootstrap, Firebase, Node Js, MySQL, MongoDB, Express, Handlebars JS, & React Js.">
-                            <h3>University of California Los Angeles</h3>
-                            <img class="img-responsive " src="img/ucla.png" alt="UCLA logo">
+                        <a class="experience_img">
+                            <div id="all">
+                                <div class="view hoverView ucla_logo">
+                                    <img class="img-responsive  center-block" src="img/ucla.png" alt="UCLA logo">
+                                    <div class="mask">
+                                        <h2>Learned Software Development</h2>
+                                        <p>Designing And Building Web Applications.</p>
+                                        <p> Skills Learned Consisted Of HTML5, CSS3, Javascript, JQuery, Bootstrap, Firebase, Node Js, MySQL, MongoDB, Express, Handlebars JS, & React Js.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </a>
                     </li>
                     <li>
                         <div class="target_4 jump"></div>
-                        <a class="experience_img trilogy_logo" data-original-title="From: 2017 to Present" data-animation="false"
-                            data-easein="perspectiveDownIn" href="#" rel="popover" data-html = "true" data-placement="left" data-content="&#8226; Instruct beginning students in coding best practices <br /> &#8226; Help students learn software development by guiding them through in-class exercises and homework.<br />  &#8226; Assisted students in learning HTML, CSS, Bootstrap, AJAX, JSON, JavaScript, jQuery and React.js">
-                            <h3>Trilogy Education Services</h3>
-                            <img class="img-responsive " src="img/trilogy.jpg" alt="Trilogy Education">
+                        <a class="experience_img">
+                            <div id="all">
+                                <div class="view hoverView trilogy_logo">
+                                    <img class="img-responsive  center-block" src="img/trilogyWeb.jpg" alt="Trilogy Education">
+                                    <div class="mask">
+                                        <h2>Trilogy Education</h2>
+                                        <p>FullStack Developer & Teacher Assistant</p>
+                                        <p>Collaborated on deploying new front-end application using React, Redux, React Bootstrap, Node.js.</p>
+                                        <p>Assisted with developing back-end features in Node.js and MySQL.</p>
+                                        <p> Wrote and implemented scripts to enhance user experience.</p>
+                                        <p>Assisted students in learning HTML, CSS, Bootstrap, AJAX, JSON, JavaScript, jQuery and React.js</p>
+                                    </div>
+                                </div>
+                            </div>
                         </a>
                     </li>
                     <li>
                         <div class="target_5 jump"></div>
-                        <a class="experience_img ls_logo" data-original-title="From: 2017 to Present" data-animation="false"
-                            data-easein="perspectiveDownIn" href="#" rel="popover" data-html = "true" data-placement="left" data-content="&#8226; Implemented new approaches to complex design and UX problems. <br />&#8226;Conducted multiple A/B testing utilizing Optimizely to provide data analytics and measure impact of new features. <br />&#8226;Developed QR code scanner on mobile web browsers to improve customer in store experience.<br /> &#8226;Utilized Blue Triangle to optimize front-end efficiency by restructuring the critical rendering path of the site and deferring render blocking scripts.">
-                            <h3>Living Spaces</h3>
-                            <img class="img-responsive" src="img/LivingSpaces.jpg" alt="Living Spaces">
+                        <a class="experience_img">
+                            <div id="all">
+                                <div class="view hoverView ls_logo">
+                                    <img class="img-responsive center-block" src="img/livingSpacesWeb.jpg" alt="Living Spaces">
+                                    <div class="mask">
+                                        <h2>The Only Living Boy in New York</h2>
+                                        <p>Words and such, a whole lot more of muh flippin' words.</p>
+                                        <a href="#" class="info">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
                         </a>
                     </li>
                 </ol>
@@ -784,8 +794,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js" type="text/javascript">
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.ui.min.js"></script>
     <script src="static/js/vendor/ace.js" type="text/javascript" charset="utf-8"></script>
     <script src="static/js/vendor/theme-monokai.js" type="text/javascript"></script>
     <script src="static/js/vendor/theme-sqlserver.js" type="text/javascript"></script>

@@ -252,7 +252,7 @@ $(document).ready(function () {
     var pinScene01 = new ScrollMagic.Scene({
         triggerElement: '#slide01',
         triggerHook: 0,
-        duration: '100%'
+        duration: '80%'
       })
       .setPin('#slide01 .pin-wrapper')
       .addTo(controller)
@@ -264,7 +264,7 @@ $(document).ready(function () {
     var pinScene02 = new ScrollMagic.Scene({
         triggerElement: '#slide01',
         triggerHook: 0,
-        duration: '190%'
+        duration: '180%'
       })
       .setPin('#slide02 .pin-wrapper')
       .addTo(controller);
@@ -273,7 +273,7 @@ $(document).ready(function () {
     var pinScene03 = new ScrollMagic.Scene({
         triggerElement: '#slide02',
         triggerHook: 0,
-        duration: '190%'
+        duration: '180%'
       })
       .setPin('#slide03 .pin-wrapper')
       .addTo(controller)

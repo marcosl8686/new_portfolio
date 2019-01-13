@@ -39,7 +39,6 @@
   color: #fff;
 }
 
-
 .slide {
   position: relative;
   overflow: hidden;
@@ -82,7 +81,13 @@
   text-transform: uppercase;
   text-align: center;
 }
-
+.zelda_logo,
+.lego_logo {
+  width: 10%;
+}
+.gunpla_logo {
+  width: 15%;
+}
 
 #slide02 .pin-wrapper,
 #slide03 .pin-wrapper,
@@ -95,7 +100,6 @@
   position: absolute !important;
   clip: rect(auto, auto, auto, auto);
 }
-
 
 /* #pinContainer {
   width: 100%;
@@ -149,11 +153,27 @@
    Media Queries
    ========================================================================== */
 
-   @media (max-width: 1199px) {}
+   @media (max-width: 1199px) {
+    .zelda_logo,
+    .lego_logo {
+      width: 20%;
+    }
+    .gunpla_logo {
+      width: 25%;
+    }
+   }
 
    /*    Medium devices (tablets, less than 992px)*/
    
-   @media (max-width: 991px) {}
+   @media (max-width: 991px) {
+    .zelda_logo,
+    .lego_logo {
+      width: 20%;
+    }
+    .gunpla_logo {
+      width: 25%;
+    }
+   }
    
    /*// Small devices (landscape phones, less than 768px)*/
    
@@ -423,9 +443,9 @@
   .cd-horizontal-timeline .exp_time {
     position: relative;
     display: block;
-    margin: 100px;
+    margin: 100px 0;
     height: 4px;
-    top: 50%;
+    top: 30%;
     width: 90%;
   }
   .cd-horizontal-timeline .building_time {
@@ -457,21 +477,30 @@
   .building_unit {
     position: absolute;
     bottom: 32px;
-    left: 65%;
+    left:50%;
     transform: translateX(-50%);
     z-index: 1;
+    width: 100%;
   }
-  .experience_img {
+  .building_unit img {
+    margin: 0 auto;
+    width: 50%;
+  }
+  /* .experience_img {
     position: absolute;
     top: 50%;
-    width: 35%;
     left: 50%;
     transform: translate(-50%, -100%);
     text-align: center;
-  }
-  .experience_img img {
-    padding: 0 15%;
-  }
+  } */
+  /* .experience_img img {
+    transition: all 1.5s;
+  } */
+  /* .experience_img img:hover {
+    transform: translateY(-.40px);
+    border-radius: .2rem;
+    transform: scale(1.3) 
+  } */
   .building1_img {
     position: absolute;
     top: -32px;
@@ -670,3 +699,127 @@
     text-align: center;
     background-image: url(../img/clouds.gif);
   }
+
+  /* Hover CSS */
+
+
+#hover {
+  color: rgba(188, 175, 204, 0.9);
+}
+
+
+
+/* generic css */
+
+.view {
+  margin: 10px;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  width: 50%;
+  margin: 0 auto;
+}
+.experience_img {
+  display: block;
+}
+
+.view .mask,
+.view .content {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.view img {
+  display: block;
+  position: relative
+}
+
+.view h2 {
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  font-size: 17px;
+  font-family: Raleway, serif;
+  padding: 10px;
+  /*background: rgba(0, 0, 0, 0.8);*/
+  margin: 20px 0 0 0
+}
+
+.view p {
+  font-size: 14px;
+  position: relative;
+  color: #fff;
+  padding: 0px 20px 0px;
+  text-align: center
+}
+
+.view a.info {
+  display: inline-block;
+  text-decoration: none;
+  padding: 7px 14px;
+  background: #000;
+  color: #fff;
+  text-transform: uppercase;
+  box-shadow: 0 0 1px #000
+}
+
+.view a.info:hover {
+  box-shadow: 0 0 5px #000
+}
+
+/*3*/
+
+.hoverView img {
+  transform: scaleY(1);
+  transition: all .5s ease-in-out;
+}
+
+.hoverView .mask {
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: all 0.5s linear;
+  opacity: 0;
+}
+
+.hoverView h2 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  background: transparent;
+  margin: 20px 40px 0px 40px;
+  transform: scale(0);
+  color: #fff;
+  transition: all 0.5s linear;
+  opacity: 0;
+}
+
+.hoverView p {
+  color: #fff;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.5s linear;
+}
+
+.hoverView a.info {
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.5s linear;
+}
+
+.hoverView:hover img {
+  -webkit-transform: scale(2);
+  transform: scale(2);
+  opacity: 0;
+}
+
+.hoverView:hover .mask {
+  opacity: 1;
+}
+
+.hoverView:hover h2,
+.hoverView:hover p,
+.hoverView:hover a.info {
+  transform: scale(1);
+  opacity: 1;
+}
