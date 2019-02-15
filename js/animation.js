@@ -3,6 +3,7 @@ var jumpCount = 1;
 
 $(document).ready(function () {
     var animatedMovement = "+=" + $(window).width() * 2.9;
+    var animatedMovement2 = "+=" + $(window).width() * 2.5;
     console.log(animatedMovement)
   
   
@@ -20,7 +21,7 @@ $(document).ready(function () {
     });
     //Marcos Avatar Stats
     var character_stats = TweenMax.to('.character_stats', 0.5, {
-      x: animatedMovement,
+      x: animatedMovement2,
       ease: Linear.easeNone
     });
     //UCI logo pop-up
@@ -121,6 +122,9 @@ $(document).ready(function () {
       y: '+=1000',
       onUpdate:function() {
         $('#mychar').attr('src', 'img/Marcos_3.png');
+      },
+      onComplete:function() {
+        removeLevelUpAnimation();
       }
     });
      var jumpChar2 = TweenMax.to(charObj, 01, {
@@ -132,6 +136,9 @@ $(document).ready(function () {
       },
       onUpdate:function() {
         $('#mychar').attr('src', 'img/Marcos_3.png');
+      },
+      onComplete:function() {
+        removeLevelUpAnimation();
       }
     });
      var jumpChar3 = TweenMax.to(charObj, 01, {
@@ -143,6 +150,9 @@ $(document).ready(function () {
       },
       onUpdate:function() {
         $('#mychar').attr('src', 'img/Marcos_3.png');
+      },
+      onComplete:function() {
+        removeLevelUpAnimation();
       }
     });
      var jumpChar4 = TweenMax.to(charObj, 01, {
@@ -154,6 +164,9 @@ $(document).ready(function () {
       },
       onUpdate:function() {
         $('#mychar').attr('src', 'img/Marcos_3.png');
+      },
+      onComplete:function() {
+        removeLevelUpAnimation();
       }
     });
      var jumpChar5 = TweenMax.to(charObj, 01, {
@@ -165,47 +178,67 @@ $(document).ready(function () {
       },
       onUpdate:function() {
         $('#mychar').attr('src', 'img/Marcos_3.png');
+      },
+      onComplete:function() {
+        removeLevelUpAnimation();
       }
     });
-
+    var charLevel = $('#char_level'),
+        charHp = $('#char_hp'),
+        charMp = $('#char_mp'),
+        charRole = $('#char_role')
 
     function updateLevelUpStats() {
-      var charLevel = $('#char_level'),
-          charHp = $('#char_hp'),
-          charMp = $('#char_mp')
-
+      
           switch(jumpCount) {
             case 1:
-              charLevel.text("LvL 10");
-              charHp.text("HP 1150/1150");
-              charMp.text("MP 480/480");
+              charRole.html('Role: Student');
+              charLevel.html('LvL 10');
+              charHp.html('HP 1150/1150');
+              charMp.html('MP 480/480');
+              levelUpAnimation();
               break;
             case 2:
-              charLevel.text("LvL 25");
-              charHp.text("HP 2850/2850");
-              charMp.text("MP 580/580");
+              charRole.html('Role: Manager');
+              charLevel.html('LvL 25');
+              charHp.html('HP 2850/2850');
+              charMp.html('MP 580/580');
+              levelUpAnimation();
               break;
             case 3: 
-              charLevel.text("LvL 60");
-              charHp.text("HP 6200/6200");
-              charMp.text("MP 680/680");
+              charRole.html('Role: Student');
+              charLevel.html('LvL 60');
+              charHp.html('HP 6200/6200');
+              charMp.html('MP 680/680');
+              levelUpAnimation();
               break;
             case 4: 
-              charLevel.text("LvL 75");
-              charHp.text("HP 7100/7100");
-              charMp.text("MP 750/750");
+              charRole.html('Role: Developer');
+              charLevel.html('LvL 75');
+              charHp.html('HP 7100/7100');
+              charMp.html('MP 750/750');
+              levelUpAnimation();
               break;
             case 5: 
-              charLevel.text("LvL 88");
-              charHp.text("HP 8900/8900");
-              charMp.text("MP 860/860");
+              charRole.html('Role: Developer');
+              charLevel.html('LvL 88');
+              charHp.html('HP 8900/8900');
+              charMp.html('MP 860/860');
+              levelUpAnimation();
               break;
           }
           if(jumpCount < 6) {
             jumpCount++;
           }
     }
-    
+    function levelUpAnimation() {
+      $('#char_level, #char_hp, #char_mp').append(' <i class="fa fa-long-arrow-up" aria-hidden="true"></i>');
+      $('#char_level, #char_hp, #char_mp, #char_role').addClass('levelUpFlash');
+    }
+    function removeLevelUpAnimation() {
+      $('#char_level, #char_hp, #char_mp, #char_role').removeClass('levelUpFlash');
+      $('.fa-long-arrow-up').remove();
+    }
     var charScene = new ScrollMagic.Scene({triggerElement: ".target1", duration: '250%',triggerHook: 1}).setTween(charTween).addTo(horController);
     
     var jumpScene_uci = new ScrollMagic.Scene({triggerElement: ".target_1", duration: '10%',triggerHook: 0.2}).setTween(jumpChar).addTo(horController)

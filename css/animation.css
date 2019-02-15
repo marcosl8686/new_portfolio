@@ -1,15 +1,17 @@
 /* ===== ScrollMagic Class ==============================================
    ========================================================================== */
 
-   .wrapper {
-    max-width: 350px;
-    margin: 0 10%;
-  }
-  .wrapper {
-    width: 90%;
-    margin: 0 5%;
-  }
-  /* ==========================================================================
+.wrapper {
+  max-width: 350px;
+  margin: 0 10%;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 5%;
+}
+
+/* ==========================================================================
    ========================================================================== */
 .slide {
   background-attachment: fixed;
@@ -18,6 +20,7 @@
   background-size: cover;
 
 }
+
 .about_wrapper {
   transition: background 1s ease;
   position: relative;
@@ -28,7 +31,7 @@
   top: 50%;
   right: 0;
   transform: translateY(-50%);
-  
+
 }
 
 #slide00,
@@ -55,17 +58,19 @@
   top: 45%;
   left: 50%;
 }
+
 .editor_wrapper {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-80%, -38%);
 }
+
 .slide .editor_box {
-  
+
   width: 100%;
   height: 68vh;
-  
+
 }
 
 .about-title {
@@ -81,10 +86,12 @@
   text-transform: uppercase;
   text-align: center;
 }
+
 .zelda_logo,
 .lego_logo {
   width: 10%;
 }
+
 .gunpla_logo {
   width: 15%;
 }
@@ -119,10 +126,12 @@
   -webkit-perspective: 1000;
   perspective: 1000;
 }
+
 #slideContainer {
   width: 400%;
   height: 100vh;
 }
+
 .panel {
   height: 100%;
   width: 25%;
@@ -131,16 +140,20 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .lego {
   background-image: url(../img/lego_bg.jpg);
 }
+
 .zelda_bg {
   background-image: url(../img/zelda-wallpaper.png);
 }
+
 .gundam {
   background-image: url(../img/gundam_bg.jpg);
   background-position: top right;
 }
+
 .marcos {
   background-image: url(../img/marcos_bg2.jpg);
 }
@@ -149,518 +162,480 @@
 
 
 
-/* ==========================================================================
-   Media Queries
-   ========================================================================== */
 
-   @media (max-width: 1199px) {
-    .zelda_logo,
-    .lego_logo {
-      width: 20%;
-    }
-    .gunpla_logo {
-      width: 25%;
-    }
-   }
-
-   /*    Medium devices (tablets, less than 992px)*/
-   
-   @media (max-width: 991px) {
-    .zelda_logo,
-    .lego_logo {
-      width: 20%;
-    }
-    .gunpla_logo {
-      width: 25%;
-    }
-   }
-   
-   /*// Small devices (landscape phones, less than 768px)*/
-   
-   @media (max-width: 768px) {
-     .slide .editor_box {
-       top: 20%;
-       left: 50%;
-       margin-left: -40%;
-       width: 70%;
-       -webkit-transform: unset;
-       transform: unset;
-     }
-     .slide .wrapper {
-       top: 75%;
-       width: 80%;
-       left: 50%;
-       margin-left: -40%;
-       max-width: 80%;
-     }
-   }
-   
-   /*SideSlide CSS*/
+/*SideSlide CSS*/
 
 #experience_school {
-    position: relative;
-    overflow: hidden;
-    color: #333;
+  position: relative;
+  overflow: hidden;
+  color: #333;
+}
+
+.horizontal-container {
+  width: 300%;
+  height: 100vh;
+  position: relative;
+}
+
+.section-horizontal {
+  width: 100%;
+  height: 100%;
+}
+
+.section-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.section-2 {
+  position: absolute;
+  top: 0;
+  left: 33.3333%;
+  right: 66.6666%;
+  bottom: 0;
+}
+
+.section-3 {
+  position: absolute;
+  top: 0;
+  left: 66.6666%;
+  right: 100%;
+  bottom: 0;
+}
+
+.section-1,
+.section-2,
+.section-3 {
+  color: #333;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.section-horizontal .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 5%;
+}
+
+#mychar {
+  position: absolute;
+  bottom: 32px;
+  left: 0%;
+  width: 5%;
+  z-index: 10;
+}
+
+.character_stats {
+  position: absolute;
+  top: 5%;
+  left: -4%;
+}
+
+.main_stats {
+  display: inline-block;
+  padding-left: 1rem;
+}
+
+.character_stats img {
+  width: 40%;
+  float: left;
+}
+
+.character_stats p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;
+  white-space: pre;
+  margin: 0;
+}
+
+/******** PIXEL BORDER ********/
+
+.pxl-border {
+  display: block;
+  color: #fff;
+  background: url('../img/char_stats_bg.jpg');
+  width: 15%;
+  padding: 2rem;
+  margin: 3rem auto;
+  border-top: 1rem solid black;
+  border-bottom: 1rem solid black;
+}
+
+.pxl-border:before,
+.pxl-border:after {
+  content: '';
+  top: 0;
+  width: 10px;
+  height: 100%;
+  position: absolute;
+  background: black;
+}
+
+
+.pxl-border:before {
+  left: -10px;
+}
+
+
+.pxl-border:after {
+  right: -10px;
+}
+
+.an_trigger {
+  z-index: 100;
+  position: absolute;
+  top: 20%;
+  left: 0;
+  width: 1rem;
+  height: 1rem;
+  background-color: green;
+}
+
+/*animation*/
+
+.levelUpFlash {
+  color: #FFDD33;
+  -webkit-animation: flash linear 1s infinite;
+  animation: flash linear 1s infinite;
+}
+
+@-webkit-keyframes flash {
+  0% {
+    opacity: 1;
   }
-  
-  .horizontal-container {
-    width: 300%;
-    height: 100vh;
-    position: relative;
+
+  50% {
+    opacity: .1;
   }
-  
-  .section-horizontal {
-    width: 100%;
-    height: 100%;
+
+  100% {
+    opacity: 1;
   }
-  
-  .section-1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+}
+
+@keyframes flash {
+  0% {
+    opacity: 1;
   }
-  
-  .section-2 {
-    position: absolute;
-    top: 0;
-    left: 33.3333%;
-    right: 66.6666%;
-    bottom: 0;
+
+  50% {
+    opacity: .1;
   }
-  
-  .section-3 {
-    position: absolute;
-    top: 0;
-    left: 66.6666%;
-    right: 100%;
-    bottom: 0;
+
+  100% {
+    opacity: 1;
   }
-  
-  .section-1,
-  .section-2,
-  .section-3 {
-    color: #333;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-  }
-  
-  .section-horizontal .content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .wrapper {
-    width: 90%;
-    margin: 0 5%;
-  }
-  
-   
-   /*// Extra small devices (portrait phones, less than 576px)*/
-   
-   @media (max-width: 575px) {
-     .slide .editor_box {
-       top: 10%;
-       left: 50%;
-       margin-left: -45%;
-       width: 90%;
-       height: 300px;
-       -webkit-transform: unset;
-       transform: unset;
-     }
-     .slide .wrapper {
-       top: 65%;
-       width: 80%;
-       left: 50%;
-       margin-left: -40%;
-       max-width: 80%;
-     }
-     .ace_gutter-layer {
-       width: 30px;
-     }
-   }
-   #mychar {
-    position: absolute;
-    bottom: 32px;
-    left: 0%;
-    width: 5%;
-    z-index: 10;
-  }
-  
-  .character_stats {
-    position: absolute;
-    top: 5%;
-    left: -4%;
-  }
-  .main_stats {
-    display: inline-block;
-    padding-left: 1.5rem;
-  }
-  
-  .character_stats img {
-    width: 40%;
-    float: left;
-  }
-  .character_stats p {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.6rem;
-    white-space: pre;
-    margin: 0;
-  }
-  /******** PIXEL BORDER ********/
-  
-  .pxl-border {
-    display: block;
-    color: #fff;
-    background: url('../img/char_stats_bg.jpg');
-    width: 50rem;
-    padding: 2rem;
-    margin: 3rem auto;
-    border-top: 1rem solid black;
-    border-bottom: 1rem solid black;
-  }
-  
-  .pxl-border:before,
-  .pxl-border:after {
-    content: '';
-    top: 0;
-    width: 10px;
-    height: 100%;
-    position: absolute;
-    background: black;
-  }
-  
-  
-  .pxl-border:before {
-    left: -10px;
-  }
-  
-  
-  .pxl-border:after {
-    right: -10px;
-  }
-  
-  .an_trigger {
-    z-index: 100;
-    position: absolute;
-    top: 20%;
-    left: 0;
-    width: 1rem;
-    height: 1rem;
-    background-color: green;
-  }
-  
-  /*animation*/
-  
-  #section07 a {
-    padding-top: 80px;
-  }
-  
-  #section07 a span {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 24px;
-    height: 24px;
-    margin-left: -12px;
-    border-left: 1px solid #fff;
-    border-bottom: 1px solid #fff;
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    -webkit-animation: sdb07 2s infinite;
-    animation: sdb07 2s infinite;
+}
+
+#section07 a {
+  padding-top: 80px;
+}
+
+#section07 a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb07 2s infinite;
+  animation: sdb07 2s infinite;
+  opacity: 0;
+  box-sizing: border-box;
+}
+
+#section07 a span:nth-of-type(1) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+#section07 a span:nth-of-type(2) {
+  top: 16px;
+  -webkit-animation-delay: .15s;
+  animation-delay: .15s;
+}
+
+#section07 a span:nth-of-type(3) {
+  top: 32px;
+  -webkit-animation-delay: .3s;
+  animation-delay: .3s;
+}
+
+@-webkit-keyframes sdb07 {
+  0% {
     opacity: 0;
-    box-sizing: border-box;
   }
-  
-  #section07 a span:nth-of-type(1) {
-    -webkit-animation-delay: 0s;
-    animation-delay: 0s;
+
+  50% {
+    opacity: 1;
   }
-  
-  #section07 a span:nth-of-type(2) {
-    top: 16px;
-    -webkit-animation-delay: .15s;
-    animation-delay: .15s;
+
+  100% {
+    opacity: 0;
   }
-  
-  #section07 a span:nth-of-type(3) {
-    top: 32px;
-    -webkit-animation-delay: .3s;
-    animation-delay: .3s;
+}
+
+@keyframes sdb07 {
+  0% {
+    opacity: 0;
   }
-  
-  @-webkit-keyframes sdb07 {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
+
+  50% {
+    opacity: 1;
   }
-  
-  @keyframes sdb07 {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
+
+  100% {
+    opacity: 0;
   }
-  
-  #section07 a {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    z-index: 2;
-    display: inline-block;
-    -webkit-transform: translate(0, -50%);
-    transform: translate(0, -50%);
-    color: #fff;
-    font: normal 400 20px/1 'Josefin Sans', sans-serif;
-    letter-spacing: .1em;
-    text-decoration: none;
-    transition: opacity .3s;
-  }
-  
-  #section07 a:hover {
-    opacity: .5;
-  }
-  
-  
-  /* ---- Timeline ---- */
-  
-  .cd-horizontal-timeline .exp_time {
-    position: relative;
-    display: block;
-    margin: 100px 0;
-    height: 4px;
-    top: 30%;
-    width: 90%;
-  }
-  .cd-horizontal-timeline .building_time {
-    position: absolute;
-    margin: 0%;
-    bottom: 0;
-    width: 90%;
-    display: block;
-  }
-  
-  
-  /* ---- Timeline elements ---- */
-  
-  .cd-horizontal-timeline li {
-    position: relative;
-    display: inline-block;
-    float: left;
-    width: 15.0%;
-    font: bold 14px arial;
-    height: 50px;
-  }
-  
-  .cd-horizontal-timeline li .diplome {
-    position: absolute;
-    top: -60px;
-    left: 36%;
-    color: #000000;
-  }
-  .building_unit {
-    position: absolute;
-    bottom: 32px;
-    left:50%;
-    transform: translateX(-50%);
-    z-index: 1;
-    width: 100%;
-  }
-  .building_unit img {
-    margin: 0 auto;
-    width: 50%;
-  }
-  /* .experience_img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -100%);
-    text-align: center;
-  } */
-  /* .experience_img img {
-    transition: all 1.5s;
-  } */
-  /* .experience_img img:hover {
-    transform: translateY(-.40px);
-    border-radius: .2rem;
-    transform: scale(1.3) 
-  } */
-  .building1_img {
-    position: absolute;
-    top: -32px;
-    width: 200px;
-    left: 35%
-  }
-  
-  .cd-horizontal-timeline li .point {
-    content: "";
-    top: -4px;
-    left: 43%;
-    display: block;
-    width: 6px;
-    height: 6px;
-    border: 4px solid #31708F;
-    border-radius: 10px;
-    background: #fff;
-    position: absolute;
-  }
-  
-  .cd-horizontal-timeline li .description {
-    display: none;
-    background-color: #f4f4f4;
-    padding: 10px;
-    position: relative;
-    font-weight: normal;
-    z-index: 1;
-    width: 40%;
-    margin: 20px auto;
-  }
-  
-  .cd-horizontal-timeline .description::before {
-    content: '';
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-bottom: 5px solid #f4f4f4;
-    position: absolute;
-    top: -5px;
-    left: 43%;
-  }
-  ::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
-  }
-  
-  ::selection {
-    background: #b3d4fc;
-    text-shadow: none;
-  }
-  
-  hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-  }
-  
-  audio,
-  canvas,
-  img,
-  video {
-    vertical-align: middle;
-  }
-  
-  fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-  }
-  
-  textarea {
-    resize: vertical;
-  }
-  
-  .dont-display {
-    display: none;
-  }
-  
-  .browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-  }
-  
-  
- 
-  
-  /*SideSlide CSS*/
-  
-  #experience_school {
-    position: relative;
-    overflow: hidden;
-    color: #333;
-  }
-  
-  .horizontal-container {
-    width: 300%;
-    height: 100vh;
-    position: relative;
-  }
-  
-  .section-horizontal {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .section-1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-  
-  .section-2 {
-    position: absolute;
-    top: 0;
-    left: 33.3333%;
-    right: 66.6666%;
-    bottom: 0;
-  }
-  
-  .section-3 {
-    position: absolute;
-    top: 0;
-    left: 66.6666%;
-    right: 100%;
-    bottom: 0;
-  }
-  
-  .section-1,
-  .section-2,
-  .section-3 {
-    color: #333;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-  }
-  
-  .section-horizontal .content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .wrapper {
-    width: 90%;
-    margin: 0 5%;
-  }
-  
-  
-  /* ---- Hover effects ---- */
-  
-  /* .cd-horizontal-timeline li:hover {
+}
+
+#section07 a {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color: #fff;
+  font: normal 400 20px/1 'Josefin Sans', sans-serif;
+  letter-spacing: .1em;
+  text-decoration: none;
+  transition: opacity .3s;
+}
+
+#section07 a:hover {
+  opacity: .5;
+}
+
+
+/* ---- Timeline ---- */
+
+.cd-horizontal-timeline .exp_time {
+  position: relative;
+  display: block;
+  margin: 100px 0;
+  height: 4px;
+  top: 30%;
+  width: 90%;
+}
+
+.cd-horizontal-timeline .building_time {
+  position: absolute;
+  margin: 0%;
+  bottom: 0;
+  width: 90%;
+  display: block;
+}
+
+
+/* ---- Timeline elements ---- */
+
+.cd-horizontal-timeline li {
+  position: relative;
+  display: inline-block;
+  float: left;
+  width: 15.0%;
+  font: bold 14px arial;
+  height: 50px;
+}
+
+.cd-horizontal-timeline li .diplome {
+  position: absolute;
+  top: -60px;
+  left: 36%;
+  color: #000000;
+}
+
+.building_unit {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  width: 100%;
+}
+
+.building_unit img {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.building1_img {
+  position: absolute;
+  top: -32px;
+  width: 200px;
+  left: 35%
+}
+
+.cd-horizontal-timeline li .point {
+  content: "";
+  top: -4px;
+  left: 43%;
+  display: block;
+  width: 6px;
+  height: 6px;
+  border: 4px solid #31708F;
+  border-radius: 10px;
+  background: #fff;
+  position: absolute;
+}
+
+.cd-horizontal-timeline li .description {
+  display: none;
+  background-color: #f4f4f4;
+  padding: 10px;
+  position: relative;
+  font-weight: normal;
+  z-index: 1;
+  width: 40%;
+  margin: 20px auto;
+}
+
+.cd-horizontal-timeline .description::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #f4f4f4;
+  position: absolute;
+  top: -5px;
+  left: 43%;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+audio,
+canvas,
+img,
+video {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.dont-display {
+  display: none;
+}
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+
+
+
+/*SideSlide CSS*/
+
+#experience_school {
+  position: relative;
+  overflow: hidden;
+  color: #333;
+}
+
+.horizontal-container {
+  width: 300%;
+  height: 100vh;
+  position: relative;
+}
+
+.section-horizontal {
+  width: 100%;
+  height: 100%;
+}
+
+.section-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.section-2 {
+  position: absolute;
+  top: 0;
+  left: 33.3333%;
+  right: 66.6666%;
+  bottom: 0;
+}
+
+.section-3 {
+  position: absolute;
+  top: 0;
+  left: 66.6666%;
+  right: 100%;
+  bottom: 0;
+}
+
+.section-1,
+.section-2,
+.section-3 {
+  color: #333;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.section-horizontal .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 5%;
+}
+
+
+/* ---- Hover effects ---- */
+
+/* .cd-horizontal-timeline li:hover {
     cursor: pointer;
     color: #48A4D2;
   }
@@ -669,38 +644,41 @@
     display: block;
   } */
 
-  .popover-example { 
-    margin: 0 0 10px;
-    list-style: none;
-  }
-  .popover-example li{
-    display: inline-block;
-    margin: 4px;
-    padding: 0px;
-  }
-  .btn:focus{
-    outline: none;
-  }
-  .modExample .btn{
-      margin: 4px 8px 4px 0;
-  }
-  
-  
-  .grass {
-    background-image: url(../img/grass.gif);
-    position: absolute;
-    height: 32px;
-    width: 100%;
-    bottom: 0px;
-  }
-  
-  .clouds {
-    height: 100%;
-    text-align: center;
-    background-image: url(../img/clouds.gif);
-  }
+.popover-example {
+  margin: 0 0 10px;
+  list-style: none;
+}
 
-  /* Hover CSS */
+.popover-example li {
+  display: inline-block;
+  margin: 4px;
+  padding: 0px;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.modExample .btn {
+  margin: 4px 8px 4px 0;
+}
+
+
+.grass {
+  background-image: url(../img/grass.gif);
+  position: absolute;
+  height: 32px;
+  width: 100%;
+  bottom: 0px;
+}
+
+.clouds {
+  height: 100%;
+  text-align: center;
+  background-image: url(../img/clouds.gif);
+}
+
+/* Hover CSS */
 
 
 #hover {
@@ -714,11 +692,11 @@
 .view {
   margin: 10px;
   position: relative;
-  text-align: center;
   cursor: pointer;
   width: 50%;
   margin: 0 auto;
 }
+
 .experience_img {
   display: block;
 }
@@ -735,6 +713,10 @@
 .view img {
   display: block;
   position: relative
+}
+
+.view .sub_title {
+  text-align: center;
 }
 
 .view h2 {
@@ -754,7 +736,6 @@
   position: relative;
   color: #fff;
   padding: 0px 20px 0px;
-  text-align: center
 }
 
 .view a.info {
@@ -822,4 +803,80 @@
 .hoverView:hover a.info {
   transform: scale(1);
   opacity: 1;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media (max-width: 1199px) {
+
+  .zelda_logo,
+  .lego_logo {
+    width: 20%;
+  }
+
+  .gunpla_logo {
+    width: 25%;
+  }
+
+  .slide .editor_box {
+    width: 100%;
+  }
+
+  .editor_wrapper {
+    width: 80%;
+    transform: translate(-50%, -38%);
+  }
+
+  .about-title {
+    top: 13%;
+  }
+
+  .pxl-border {
+    width: 25%;
+  }
+
+  .character_stats {
+    top: 15%;
+  }
+  .cd-horizontal-timeline .exp_time {
+    top: 45%;
+  }
+  .view {
+    width: 130%;
+  }
+}
+
+/*    Medium devices (tablets, less than 992px)*/
+
+@media (max-width: 991px) {
+
+}
+
+/*// Small devices (landscape phones, less than 768px)*/
+
+@media (max-width: 768px) {
+  .slide .wrapper {
+    top: 75%;
+    width: 80%;
+    left: 50%;
+    margin-left: -40%;
+    max-width: 80%;
+  }
+  .editor_wrapper{
+    width: 100%;
+    transform: translate(0, 0);
+    left: 0;
+    right: 0;
+    top: 20%;
+  }
+  .slide .editor_box {
+
+  }
+}
+
+/*// Extra small devices (portrait phones, less than 576px)*/
+
+@media (max-width: 575px) {
 }

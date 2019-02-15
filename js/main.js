@@ -244,17 +244,17 @@ $(function(){
 --------------------------------------------*/
 
     // initialize text Typer Only in Modern browsers
-    if (animation) {
+    // if (animation) {
 
-      var text = $('#home .typer-title'),
-          textOne = "I'am a Front-End Developer",
-          textTwo = "Here are three reason Why I am a great Developer",
-          textThree = "Scroll down to find out";
+    //   var text = $('#home .typer-title'),
+    //       textOne = "I'am a Front-End Developer",
+    //       textTwo = "Here are three reason Why I am a great Developer",
+    //       textThree = "Scroll down to find out";
 
-          if (!!$.prototype.typer) {
-            text.typer([textOne,textTwo,textThree]);
-          }
-    }
+    //       if (!!$.prototype.typer) {
+    //         text.typer(["Here are some reason Why i am a great Developer"]);
+    //       }
+    // }
 
 
 /*----------------------------------------------------------------------
